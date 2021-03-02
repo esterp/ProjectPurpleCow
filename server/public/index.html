@@ -4,14 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Purple Cow</title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <h2 class="title">Simple Count</h2>
+    <div class="topnav">
+        <a class="active" href="index.html">Simple Count</a>
+        <a href="tugWarDays.html">Tug-of-day</a>
+        <a href="reportPoliceAbuse.html">Report Police Abuse</a>
+    </div>
 
-    <b><div class="simpleCount">..</div></b>
-    <button type="button" class="simpleCount-btn">Increase Count</button>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="/js/simpleCount.js"></script>
-  </body>
-</html>
+    <div style="padding-left:16px">
+        <h2 class="title">Simple Count</h2>
+      </div>
+  
+      <div id="moodDayCounter-section" class="center-section">
+        <p>Click to Increase the Count</p>
+        <b><div class="simpleCount">..</div></b>
+        <button type="button" class="simpleCount-btn">Increase</button>
+      </div>
+  
+      
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script type="module" src="/js/simpleCount.js"></script>
+    </body>
+  </html>

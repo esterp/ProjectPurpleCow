@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <h2 class="title">Report an Instance of Police Abuse</h2>
+    <div class="topnav">
+      <a href="index.html">Simple Count</a>
+      <a  href="tugWarDays.html">Tug-of-day</a>
+      <a class="active" href="reportPoliceAbuse.html">Report Police Abuse</a>
+    </div>
 
-    <p>badge #</p>
-      <input type="text" id="badgeId" name="badgeId" style="font-size: 25px" maxlength="10"><br><br>
+    <div style="padding-left:16px">
+      <h2 class="title">Report an Instance of Police Abuse </br> Anonymously</h2>
+    </div>
 
-    <button type="button" class="abuseCount-btn" style="font-size: 20px">🔎</button>
-    <button type="button" class="abuseReprt-btn" style="font-size: 20px">🚨</button><br><br>
-    <b><div class="abuseCount">...</div></b><br>
+    <div id="abuseCount-section" class="center-section">
+      <p>Enter the police badge #</p>
+        <input type="text" id="badgeId" name="badgeId" style="font-size: 25px" maxlength="10"><br><br>
+
+      <button type="button" class="abuseCount-btn" style="font-size: 20px">🔎 Query reported abuses</button>
+      <button type="button" class="abuseReprt-btn" style="font-size: 20px">Report instance of abuse 🚨</button><br><br>
+      <b><div class="abuseCount">...</div></b><br>
+    </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/reportPolice.js"></script>

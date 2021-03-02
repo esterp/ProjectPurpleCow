@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    <div class="topnav">
+      <a href="index.html">Simple Count</a>
+      <a class="active" href="tugWarDays.html">Tug-of-day</a>
+      <a href="reportPoliceAbuse.html">Report Police Abuse</a>
+    </div>
+    
+    <div style="padding-left:16px">
+      <h2 class="title">Good days vs Bad days </br> Tug-War</h2>
+    </div>
 
-    <h2 class="title">Good days vs Bad days </br> Tug-War</h2>
-
-    <b><div class="tug-days">...</div></b>
-    <button type="button" class="badDay-btn">👎</button>
-    <button type="button" class="goodDay-btn">👍</button>
+    <div id="moodDayCounter-section" class="center-section">
+      <p>Let's have more good days!</p>
+      <b><div class="tug-days">...</div></b>
+      <button type="button" class="badDay-btn">Bad Day 👎</button>
+      <button type="button" class="goodDay-btn">Good Day 👍</button>
+    </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="/js/moodDay.js"></script>
