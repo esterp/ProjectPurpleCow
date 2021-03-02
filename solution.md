@@ -1,4 +1,9 @@
 ## Project Purple Count ##
+# Requirements
+- pre-installed Docker
+-- if on Windows the windows launch script will attempt to install Docker
+- pre-installed Chrome browser
+- internet connection to reach API
 
 # To Launch Using Single Startup Command
 On Windows
@@ -28,6 +33,19 @@ Locally with Yarn
 - Start yarn on server/ directory:
     > yarn start
 - Open browser and point to: localhost:8080
+
+# To Stop and Delete Docker container/images
+Via Provided Script
+    > .\run_countPurple_windows.ps1 stop
+    > .\run_countPurple_windows.ps1 delete
+
+Manually
+- stop app container
+    $ docker stop $(docker ps -q --filter ancestor=test-app )   
+- delete stopped docker container
+    $ docker rm $(docker ps -q -f "ancestor=test-app" -f "status=exited")
+- delete docker image
+    $ docker rmi test-app
 
 # Optional Configuration
 # Port
