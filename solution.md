@@ -1,7 +1,7 @@
 ## Project Purple Count ##
 
 # Requirements
-# Launch Using Single Startup Command
+# Launch Using 'Single Startup Command'
 # Build & Run manually
 # Stop and Delete Docker container/images
 # Assumptions
@@ -16,7 +16,7 @@
 - pre-installed Chrome browser
 - internet connection to reach API
 
-# To Launch Using Single Startup Command
+# Launch Using 'Single Startup Command'
 On Windows
 1- Execute the 'run_countPurple_windows.ps1' script on the project folder $PATH\Count_Purple_Cows\ via Windows PowerShell:
         > .\run_countPurple_windows.ps1 start
@@ -29,7 +29,7 @@ On Windows
 On Linux
 1- Please refer to 'run manually' section
 
-# To Build & Run manually
+# Build & Run manually
 With Docker
 - make sure the machine has docker installed
     docker -v
@@ -45,7 +45,7 @@ Locally with Yarn
     > yarn start
 - Open browser and point to: localhost:8080
 
-# To Stop and Delete Docker container/images
+# Stop and Delete Docker container/images
 Via Provided Script
     > .\run_countPurple_windows.ps1 stop
     > .\run_countPurple_windows.ps1 delete
@@ -90,9 +90,16 @@ Possible Extra Functionality
 - moodDay.js: Cover special case when API counter has not been initilized (since is a special counter that needs an extra parameter at initialization) 
 
 # Tech Stack
+Client-Side
 - HTML / CSS / JavaScript
-- Node.JS
-- Express JS
+
+Server-Side
+- Node.JS (JavaScript runtime)
+- Express JS (Minimal Node.js web application framework, being used to serve the pages)
+- Axios (Promise based HTTP client for the browser and node.js)
+- Nodemon (Simple monitor script for use during development of a node.js app)
+- Docker (OS-level virtualization to deliver software in packages)
+
 
 # Optional Configuration
 # Port
