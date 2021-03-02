@@ -1,4 +1,15 @@
 ## Project Purple Count ##
+
+# Requirements
+# Launch Using Single Startup Command
+# Build & Run manually
+# Stop and Delete Docker container/images
+# Assumptions
+# Future Updates
+# Outstanding Code
+# Tech Stack
+# Optional Configuration
+
 # Requirements
 - pre-installed Docker
 -- if on Windows the windows launch script will attempt to install Docker
@@ -46,6 +57,42 @@ Manually
     $ docker rm $(docker ps -q -f "ancestor=test-app" -f "status=exited")
 - delete docker image
     $ docker rmi test-app
+
+# Assumptions
+- API:  App only uses a single API KEY (should be added to Optional Configuration Parameters)
+- NO DB:  Samples are not using any kind of Database as needed functionality is accomplished with just the CountApi.  Certain use cases might require a simple DB so store metadata.
+- NOT Prod ready:  Although I belive Express JS can be used on a PROD environment there were no efforts made in SECURITY, AVAILABILITY nor PERFORMANCe to cover this case.
+- Trusting Users:  There are no measures taken to avoid user abuse of the app (overuse, false report, etc..)
+
+Police Report Sample
+- Police Badge IDs assumed to be between 3 - 10 characters.
+-- minimum of 3 is due to a limitation with the API (as it's minimum is 3)
+-- maximum can be increased and it was arbitrarly imposed on the HTML input element.
+
+# Future Updates
+Optimizations / Cleaner Code
+- Need to simplify get/hit API code by overloading functions and sending 'get'/'hit' parameters depending on button pressed.
+- Merge the 3 js scripts (moodDay.js, reportPolice.js, simpleCount.js) into a single script to avoid code repetition
+-- and simplify further by pasing API key to functions in order to only have a single function that connects to the API
+- Add API 'key' under customizable parameters
+
+Possible Extra Functionality
+- The same functionality used on this project can be used for similar ideas:
+-- Anonymous Zip Code Crime Index (report an instance of a crime in a specified zip code, could further be improved by allowing to choose type of crime)
+-- Anonymous Phone Number Report (report phone number (just like police badges) and count instances of reports.  Further improved by type of 
+   report (scam, sexual assult, abuse of power.. etc.), could be a global service by allowing country indicative on phone number, and with simple DB 
+   Dates of reported incidents could be stored)
+
+
+# Outstanding Code
+- linux launch script
+- run_countPurple_windows.ps1: error checking for 'port number' read from last line of this file
+- moodDay.js: Cover special case when API counter has not been initilized (since is a special counter that needs an extra parameter at initialization) 
+
+# Tech Stack
+- HTML / CSS / JavaScript
+- Node.JS
+- Express JS
 
 # Optional Configuration
 # Port
