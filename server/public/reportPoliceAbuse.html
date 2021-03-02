@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Purple Cow</title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <h2 class="title">Count</h2>
+    <h2 class="title">Report an Instance of Police Abuse</h2>
 
-    <b><div class="count">..</div></b>
-    <button type="button" class="plus-btn">Increase Count</button>
-    <button type="button" class="minus-btn">Decrease Count</button>
+    <p>badge #</p>
+      <input type="text" id="badgeId" name="badgeId" style="font-size: 25px" maxlength="10"><br><br>
 
+    <button type="button" class="abuseCount-btn" style="font-size: 20px">🔎</button>
+    <button type="button" class="abuseReprt-btn" style="font-size: 20px">🚨</button><br><br>
+    <b><div class="abuseCount">...</div></b><br>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="/js/simpleCount.js"></script>
+    <script type="module" src="/js/reportPolice.js"></script>
   </body>
 </html>

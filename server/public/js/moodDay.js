@@ -7,8 +7,8 @@ document.querySelector(".badDay-btn").addEventListener("click", badDay);
 
 /* --- Tug-of-Day --- */
 function getDays() {
-  axios.get('https://api.countapi.xyz/get/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay1').then(response => {
-        console.log(response);
+  axios.get('https://api.countapi.xyz/get/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay').then(response => {
+        //console.log(response);
         document.querySelector(".tug-days").innerHTML = response.data.value;
     }).catch(error => {
         errorMessage();
@@ -19,8 +19,8 @@ function getDays() {
 }
 
 function goodDay() {
-  axios.get('https://api.countapi.xyz/hit/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay1').then(response => {
-        console.log(response);
+  axios.get('https://api.countapi.xyz/hit/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay').then(response => {
+        //console.log(response);
         document.querySelector(".tug-days").innerHTML = response.data.value;
     }).catch(error => {
         errorMessage();
@@ -28,7 +28,7 @@ function goodDay() {
 }
 
 function badDay() {
-  axios.get('https://api.countapi.xyz/update/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay1?amount=-1').then(response => {
+  axios.get('https://api.countapi.xyz/update/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/moodDay?amount=-1').then(response => {
         console.log(response);
         document.querySelector(".tug-days").innerHTML = response.data.value;
     }).catch(error => {
@@ -38,7 +38,7 @@ function badDay() {
 
 // by default the counters can't decrease, thus in this special case the counter needs to be initilized with extra options enabled
 function initilizeCounter(){
-    axios.get('https://api.countapi.xyz/create?namespace=1ccb732e-b55a-4404-ad3f-0f99c02fe44e&key=moodDay1&enable_reset=1')
+    axios.get('https://api.countapi.xyz/create?namespace=1ccb732e-b55a-4404-ad3f-0f99c02fe44e&key=moodDay&enable_reset=1')
     .then(response => { 
         console.log(response); 
     }).catch(error => {
