@@ -9,6 +9,8 @@ document.querySelector(".simpleCount-btn").addEventListener("click", addCount);
 function getCount() {
   axios.get('https://api.countapi.xyz/get/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/purpleCount').then(responce => {
         document.querySelector(".simpleCount").innerHTML = responce.data.value;
+    }).catch(error => {
+        errorMessage();
     });
 }
 
@@ -16,5 +18,11 @@ function getCount() {
 function addCount() {
   axios.get('https://api.countapi.xyz/hit/1ccb732e-b55a-4404-ad3f-0f99c02fe44e/purpleCount').then(responce => {
         document.querySelector(".simpleCount").innerHTML = responce.data.value;
+    }).catch(error => {
+        errorMessage();
     });
+}
+
+function errorMessage() {
+    document.querySelector(".simpleCount").innerHTML = '[ There was an error, please try later ]';
 }
