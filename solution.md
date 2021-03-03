@@ -18,8 +18,8 @@
 
 # Launch Using 'Single Startup Command'
 On Windows
-1- Execute the 'run_countPurple_windows.ps1' script on the project folder $PATH\Count_Purple_Cows\ via Windows PowerShell:
-        > .\run_countPurple_windows.ps1 start
+1- Execute the 'runProjPurpleCow_win.PS1' script on the project folder $PATH\ProjectPurpleCow\ via Windows PowerShell:
+        > .\runProjPurpleCow_win.PS1 start
     
     To run app with custom port please refer to the 'Optional Configuration' section.
 
@@ -34,7 +34,7 @@ With Docker
 - make sure the machine has docker installed
     docker -v
 - Download project source
-- On $download_path/count_purple directory build and run docker image:
+- On $download_path/ProjectPurpleCow directory build and run docker image:
     $ docker build -t count-purple server/
     $ docker run -dp 3000:8080 count-purple
 - load localhost:3000 on Chrome, command line:
@@ -47,8 +47,8 @@ Locally with Yarn
 
 # Stop and Delete Docker container/images
 Via Provided Script
-    > .\run_countPurple_windows.ps1 stop
-    > .\run_countPurple_windows.ps1 delete
+    > .\runProjPurpleCow_win.PS1 stop
+    > .\runProjPurpleCow_win.PS1 delete
 
 Manually
 - stop app container
@@ -86,7 +86,7 @@ Possible Extra Functionality
 
 # Outstanding Code
 - linux launch script
-- run_countPurple_windows.ps1: error checking for 'port number' read from last line of this file
+- runProjPurpleCow_win.PS1: error checking for 'port number' read from last line of this file
 - moodDay.js: Cover special case when API counter has not been initilized (since is a special counter that needs an extra parameter at initialization) 
 
 # Tech Stack
@@ -104,9 +104,9 @@ Server-Side
 # Optional Configuration
 # Port
 - Per a single run with a custom port, please use the 'Single Startup Command' tool with the custom port:
-        > .\run_countPurple_windows.ps1 start <custom-port>
+        > .\runProjPurpleCow_win.PS1 start <custom-port>
     ie:
-        > .\run_countPurple_windows.ps1 start 8080
+        > .\runProjPurpleCow_win.PS1 start 8080
 
 - For a permanent change, update the port number on the last line of this document.
 - CAUTION - The port # must be the last line of the document, do not delete.
